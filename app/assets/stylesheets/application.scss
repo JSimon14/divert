@@ -12,3 +12,25 @@
  *
  */
 @import "bootstrap";
+
+.clear {
+	clear:both;
+}
+
+.table_title {
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+}
+
+.img {
+	text-align: right;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.first_headers th {
+	text-align: center;
+}
