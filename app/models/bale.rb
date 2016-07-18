@@ -1,0 +1,2 @@
+class Bale < ApplicationRecord
+end
