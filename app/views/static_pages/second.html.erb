@@ -12,26 +12,30 @@
 
 	<div class="first_headline">PERFORMANCE AGAINST BUDGET </div>
 	<br class='clear'/>
-	<div class="percentage_box col-xs-2 offset-xs-1">
-		<div class="percentage">72%</div>
-		<div class="percentage_caption">OF BUDGET THIS PERIOD</div>
-	</div>
-	<br class='clear'/>
-	<div class='colummn_one'>
-		<%= column_chart [["Actual", 2356],["Budget", 3012]], width: "250px", height: "175px", xtitle: "This Period" %>
-	</div>
-	<br class='clear'/>
 	<br/>
 	<br/>
-	<div class='colummn_two'>
-		<%= column_chart [["Actual", 8396],["Budget", 9102]], width: "250px", height: "175px", xtitle: "Year to Date" %>
+	<div class="container">
+		<div class="row>">
+			<div class="percentage_box col-xs-3 offset-xs-1">
+				<div class="percentage">72%</div>
+				<div class="percentage_caption">OF BUDGET THIS PERIOD</div>
+			</div>
+			
+			<div class='colummn_one col-xs-3'>
+				<%= column_chart [["Actual", 2356],["Budget", 3012]], width: "250px", height: "175px", xtitle: "This Period" %>
+			</div>
+			
+			<div class='colummn_two col-xs-3'>
+				<%= column_chart [["Actual", 8396],["Budget", 9102]], width: "250px", height: "175px", xtitle: "Year to Date" %>
+			</div>
+		</div>
 	</div>
 	<br class='clear'/>
 	<br/>
 	<br/>
 	<div class="second_headline">PERFORMANCE OVER TIME</div>
 	<br class='clear'/>
-	<%= line_chart [["2015-01-01", 25000],["2015-02-01", 25000],["2015-03-01", 25000],["2015-04-01", 25000],["2015-05-01", 25000],["2015-06-01", 25000],["2015-07-01", 25000],["2015-08-01", 25000],["2015-09-01", 25000],["2015-10-01", 25000],["2015-11-01", 25000],["2015-12-01", 25000],["2016-01-01", 25000],["2016-02-01", 25000],["2016-03-01", 25000],["2016-04-01", 25000],["2016-05-01", 25000],["2016-06-01", 25000]], width: "500px", height: "300px" %>
+	<%= line_chart [["2015-01-01", 25000],["2015-02-01", 35000],["2015-03-01", 28000],["2015-04-01", 42000],["2015-05-01", 45000],["2015-06-01", 48000],["2015-07-01", 39000],["2015-08-01", 40000],["2015-09-01", 33000],["2015-10-01", 51000],["2015-11-01", 54000],["2015-12-01", 48000],["2016-01-01", 49000],["2016-02-01", 59000],["2016-03-01", 61000],["2016-04-01", 55000],["2016-05-01", 58000],["2016-06-01", 65000]], width: "700px", height: "300px" %>
 	<br/>
 	<br/>
 	<br/>
