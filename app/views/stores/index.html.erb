@@ -27,27 +27,24 @@
 				<th>LBS</th>
 				<th>PERF SCORE</th>
 			</tr>
-			<tr class='table_content'>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr class='table_content'>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-			<tr class='table_content'>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
+			<% max_rate = 0 %> 
+			<% @stores.each do |st| %> 
+				<% store_rate = (st.total_weight/(st.square_feet*0.1)) %>
+				<% if store_rate > max_rate %>
+					<% max_rate = store_rate %>
+				<%end%>
+			 <%end%>
+			<% @stores.each do |store| %>
+				<tr>
+					<td> <%= store.district %> </td>
+					<td> <%= store.store_number %> </td>
+					<td> <%= store.num_bales %> </td>
+					<td> <%= store.total_weight %> </td>
+					<td>
+						<%= (((store.total_weight/(store.square_feet*0.1))/max_rate)*100).round() %>
+					</td>
+				</tr>
+			<%end%>
 		</tbody>
 	</table>
 
@@ -55,6 +52,8 @@
 
 </body>
 </html>  
+
+
 
 
 
